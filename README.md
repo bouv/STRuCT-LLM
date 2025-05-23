@@ -48,44 +48,44 @@ options:
 Cypher
 
 ```
-python run_eval.py --task cypher --model_path mb618/Owen_14B_2tasks --judge_model openai_gpt41_nano
+python run_eval.py --task cypher --model_pathQwen/Qwen2.5-14B-Instruct --judge_model openai_gpt41_nano
 ```
 
 QA:
 
 ```
-python run_eval.py --task qa --model_path mb618/Owen_14B_2tasks --use_prompt=final_answer --data=cr --score=EM
-python run_eval.py --task qa --model_path mb618/Owen_14B_2tasks --use_prompt=final_answer --data=cr --score=in
+python run_eval.py --task qa --model_path Qwen/Qwen2.5-14B-Instruct --use_prompt=final_answer --data=cr --score=EM
+python run_eval.py --task qa --model_path Qwen/Qwen2.5-14B-Instruct --use_prompt=final_answer --data=cr --score=in
 ```
 
 Bird:
 
 ```
-python run_eval.py --task bird --model_path mb618/Owen_14B_2tasks --use_evidence=True
+python run_eval.py --task bird --model_path Qwen/Qwen2.5-14B-Instruct --use_evidence=True
 ```
 
 Clinton:
 
 ```
-python run_eval.py --task clinton --model_path mb618/Owen_14B_2tasks --judge_model openai_gpt41_nano --use_system=True
+python run_eval.py --task clinton --model_path Qwen/Qwen2.5-14B-Instruct --judge_model openai_gpt41_nano --use_system=True
 ```
 
 CRT QA:
 
 ```
-python run_eval.py --task crt_qa --model_path mb618/Owen_14B_2tasks --use_prompt=final_answer --score=EM
-python run_eval.py --task crt_qa --model_path mb618/Owen_14B_2tasks --use_prompt=final_answer --score=in
+python run_eval.py --task crt_qa --model_path Qwen/Qwen2.5-14B-Instruct --use_prompt=final_answer --score=EM
+python run_eval.py --task crt_qa --model_path Qwen/Qwen2.5-14B-Instruct --use_prompt=final_answer --score=in
 ```
 
 Mimic:
 
 ```
-python run_eval.py --task mimic --model_path mb618/Owen_14B_2tasks
+python run_eval.py --task mimic --model_path Qwen/Qwen2.5-14B-Instruct
 ```
 
 TableBench:
 
 ```
-python run_eval.py --task tablebench --model_path mb618/Owen_14B_2tasks --score=EM
-python run_eval.py --task tablebench --model_path mb618/Owen_14B_2tasks --score=in
+python run_eval.py --task tablebench --model_path Qwen/Qwen2.5-14B-Instruct --score=EM
+python run_eval.py --task tablebench --model_path Qwen/Qwen2.5-14B-Instruct--score=in
 ```
