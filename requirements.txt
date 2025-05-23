@@ -1,0 +1,14 @@
+pandas
+numpy
+torch
+transformers
+datasets
+tqdm
+pyarrow
+openai
+langchain
+langchain-openai
+langchain-community
+pydantic
+func_timeout
+vllm
