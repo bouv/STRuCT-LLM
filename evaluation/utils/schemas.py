@@ -1,0 +1,637 @@
+mql_schema = {
+    "patients": {
+        "PATIENT_ID": "<UUID>",
+        "BIRTHDATE": "<DATE>",
+        "DEATHDATE": "<DATE>",
+        "SSN": "<STRING>",
+        "DRIVERS": "<STRING>",
+        "PASSPORT": "<STRING>",
+        "PREFIX": "<STRING>",
+        "FIRST": "<STRING>",
+        "LAST": "<STRING>",
+        "SUFFIX": "<STRING>",
+        "MAIDEN": "<STRING>",
+        "MARITAL": "<CHAR>",
+        "RACE": "<STRING>",
+        "ETHNICITY": "<STRING>",
+        "GENDER": "<CHAR>",
+        "BIRTHPLACE": "<STRING>",
+        "ADDRESS": "<STRING>",
+        "CITY": "<STRING>",
+        "STATE": "<STRING>",
+        "COUNTY": "<STRING>",
+        "FIPS": "<NUMBER>",
+        "ZIP": "<STRING>",
+        "LAT": "<NUMBER>",
+        "LON": "<NUMBER>",
+        "HEALTHCARE_EXPENSES": "<NUMBER>",
+        "HEALTHCARE_COVERAGE": "<NUMBER>",
+        "INCOME": "<NUMBER>",
+        "ENCOUNTERS": [
+            {
+                "ENCOUNTER_ID": "<UUID>",
+                "START": "<DATE>",
+                "STOP": "<DATE>",
+                "ORGANIZATION_REF": "<REF>",
+                "PROVIDER_REF": "<REF>",
+                "PAYER_REF": "<REF>",
+                "ENCOUNTER_CLASS": "<STRING>",
+                "CODE": "<NUMBER>",
+                "DESCRIPTION": "<STRING>",
+                "BASE_ENCOUNTER_COST": "<NUMBER>",
+                "TOTAL_CLAIM_COST": "<NUMBER>",
+                "PAYER_COVERAGE": "<NUMBER>",
+                "REASON_CODE": "<NUMBER>",
+                "REASON_DESCRIPTION": "<STRING>",
+                "CONDITIONS": [
+                    {
+                        "START": "<DATE>",
+                        "STOP": "<DATE>",
+                        "CODE": "<NUMBER>",
+                        "DESCRIPTION": "<STRING>",
+                    }
+                ],
+                "ALLERGIES": [
+                    {
+                        "START": "<DATE>",
+                        "STOP": "<DATE>",
+                        "CODE": "<NUMBER>",
+                        "SYSTEM": "<STRING>",
+                        "DESCRIPTION": "<STRING>",
+                        "TYPE": "<STRING>",
+                        "CATEGORY": "<STRING>",
+                        "REACTION_1": "<NUMBER>",
+                        "DESCRIPTION_1": "<STRING>",
+                        "SEVERITY_1": "<STRING>",
+                        "REACTION_2": "<NUMBER>",
+                        "DESCRIPTION_2": "<STRING>",
+                        "SEVERITY_2": "<STRING>",
+                    }
+                ],
+                "MEDICATIONS": [
+                    {
+                        "START": "<DATE>",
+                        "STOP": "<DATE>",
+                        "PAYER_REF": "<REF>",
+                        "CODE": "<NUMBER>",
+                        "DESCRIPTION": "<STRING>",
+                        "BASE_COST": "<NUMBER>",
+                        "PAYER_COVERAGE": "<NUMBER>",
+                        "DISPENSES": "<NUMBER>",
+                        "TOTAL_COST": "<NUMBER>",
+                        "REASON_CODE": "<NUMBER>",
+                        "REASON_DESCRIPTION": "<STRING>",
+                    }
+                ],
+                "CAREPLANS": [
+                    {
+                        "CAREPLAN_ID": "<UUID>",
+                        "START": "<DATE>",
+                        "STOP": "<DATE>",
+                        "CODE": "<NUMBER>",
+                        "DESCRIPTION": "<STRING>",
+                        "REASON_CODE": "<NUMBER>",
+                        "REASON_DESCRIPTION": "<STRING>",
+                    }
+                ],
+                "OBSERVATIONS": [
+                    {
+                        "DATE": "<DATE>",
+                        "CATEGORY": "<STRING>",
+                        "CODE": "<STRING>",
+                        "DESCRIPTION": "<STRING>",
+                        "VALUE": "<STRING>",
+                        "UNITS": "<STRING>",
+                        "TYPE": "<STRING>",
+                    }
+                ],
+                "PROCEDURES": [
+                    {
+                        "START": "<DATE>",
+                        "STOP": "<DATE>",
+                        "CODE": "<NUMBER>",
+                        "DESCRIPTION": "<STRING>",
+                        "BASE_COST": "<NUMBER>",
+                        "REASON_CODE": "<NUMBER>",
+                        "REASON_DESCRIPTION": "<STRING>",
+                    }
+                ],
+                "IMMUNIZATIONS": [
+                    {
+                        "DATE": "<DATE>",
+                        "CODE": "<NUMBER>",
+                        "DESCRIPTION": "<STRING>",
+                        "BASE_COST": "<NUMBER>",
+                    }
+                ],
+                "IMAGING_STUDIES": [
+                    {
+                        "IMAGING_STUDY_ID": "<UUID>",
+                        "DATE": "<DATE>",
+                        "SERIES_UID": "<STRING>",
+                        "BODYSITE_CODE": "<NUMBER>",
+                        "BODYSITE_DESCRIPTION": "<STRING>",
+                        "MODALITY_CODE": "<STRING>",
+                        "MODALITY_DESCRIPTION": "<STRING>",
+                        "INSTANCE_UID": "<STRING>",
+                        "SOP_CODE": "<STRING>",
+                        "SOP_DESCRIPTION": "<STRING>",
+                        "PROCEDURE_CODE": "<NUMBER>",
+                    }
+                ],
+                "DEVICES": [
+                    {
+                        "START": "<DATE>",
+                        "STOP": "<DATE>",
+                        "CODE": "<NUMBER>",
+                        "DESCRIPTION": "<STRING>",
+                        "UDI": "<STRING>",
+                    }
+                ],
+                "SUPPLIES": [
+                    {
+                        "DATE": "<DATE>",
+                        "CODE": "<NUMBER>",
+                        "DESCRIPTION": "<STRING>",
+                        "QUANTITY": "<NUMBER>",
+                    }
+                ],
+            }
+        ],
+        "CLAIMS": [
+            {
+                "CLAIM_ID": "<UUID>",
+                "PROVIDER_REF": "<REF>",
+                "PRIMARY_PATIENT_INSURANCE_REF": "<REF>",
+                "SECONDARY_PATIENT_INSURANCE_REF": "<REF>",
+                "DEPARTMENT_ID": "<NUMBER>",
+                "PATIENTDEPARTMENT_ID": "<NUMBER>",
+                "DIAGNOSIS_1": "<NUMBER>",
+                "DIAGNOSIS_2": "<NUMBER>",
+                "DIAGNOSIS_3": "<NUMBER>",
+                "DIAGNOSIS_4": "<NUMBER>",
+                "DIAGNOSIS_5": "<NUMBER>",
+                "DIAGNOSIS_6": "<NUMBER>",
+                "DIAGNOSIS_7": "<NUMBER>",
+                "DIAGNOSIS_8": "<NUMBER>",
+                "REFERRING_PROVIDER_REF": "<REF>",
+                "APPOINTMENT_REF": "<REF>",
+                "CURRENT_ILLNESS_DATE": "<DATE>",
+                "SERVICE_DATE": "<DATE>",
+                "SUPERVISING_PROVIDER_REF": "<REF>",
+                "STATUS_1": "<STRING>",
+                "STATUS_2": "<STRING>",
+                "STATUS_P": "<STRING>",
+                "OUTSTANDING_1": "<STRING>",
+                "OUTSTANDING_2": "<STRING>",
+                "OUTSTANDING_P": "<STRING>",
+                "LAST_BILLED_DATE_1": "<DATE>",
+                "LAST_BILLED_DATE_2": "<DATE>",
+                "LAST_BILLED_DATE_P": "<DATE>",
+                "HEALTHCARE_CLAIM_TYPE_ID_1": "<NUMBER>",
+                "HEALTHCARE_CLAIM_TYPE_ID_2": "<NUMBER>",
+                "CLAIM_TRANSACTIONS": [
+                    {
+                        "CLAIM_TRANSACTION_ID": "<UUID>",
+                        "CHARGE_ID": "<NUMBER>",
+                        "TYPE": "<STRING>",
+                        "AMOUNT": "<STRING>",
+                        "METHOD": "<STRING>",
+                        "FROMDATE": "<DATE>",
+                        "TODATE": "<DATE>",
+                        "PLACE_OF_SERVICE": "<STRING>",
+                        "PROCEDURE_CODE": "<STRING>",
+                        "MODIFIER_1": "<STRING>",
+                        "MODIFIER_2": "<STRING>",
+                        "DIAGNOSIS_REF_1": "<STRING>",
+                        "DIAGNOSIS_REF_2": "<STRING>",
+                        "DIAGNOSIS_REF_3": "<STRING>",
+                        "DIAGNOSIS_REF_4": "<STRING>",
+                        "UNITS": "<NUMBER>",
+                        "DEPARTMENT_ID": "<STRING>",
+                        "NOTES": "<STRING>",
+                        "UNIT_AMOUNT": "<STRING>",
+                        "TRANSFER_OUT_ID": "<STRING>",
+                        "TRANSFER_TYPE": "<STRING>",
+                        "PAYMENTS": "<STRING>",
+                        "ADJUSTMENTS": "<STRING>",
+                        "TRANSFERS": "<STRING>",
+                        "OUTSTANDING": "<STRING>",
+                        "APPOINTMENT_REF": "<REF>",
+                        "LINE_NOTE": "<STRING>",
+                        "PATIENT_INSURANCE_REF": "<REF>",
+                        "FEE_SCHEDULE_ID": "<STRING>",
+                        "PROVIDER_REF": "<REF>",
+                        "SUPERVISING_PROVIDER_REF": "<REF>",
+                    }
+                ],
+            }
+        ],
+        "PAYER_TRANSITIONS": [
+            {
+                "MEMBER_ID": "<UUID>",
+                "START_DATE": "<DATE>",
+                "END_DATE": "<DATE>",
+                "PAYER_REF": "<REF>",
+                "SECONDARY_PAYER_REF": "<REF>",
+                "PLAN_OWNERSHIP": "<STRING>",
+                "OWNER_NAME": "<STRING>",
+            }
+        ],
+        "EXPENSES": [
+            {
+                "YEAR": "<DATE>",
+                "PAYER_REF": "<REF>",
+                "HEALTHCARE_EXPENSES": "<NUMBER>",
+                "INSURANCE_COSTS": "<NUMBER>",
+                "COVERED_COSTS": "<NUMBER>",
+            }
+        ],
+    },
+    "organizations": {
+        "ORGANIZATION_ID": "<UUID>",
+        "NAME": "<STRING>",
+        "ADDRESS": "<STRING>",
+        "CITY": "<STRING>",
+        "STATE": "<STRING>",
+        "ZIP": "<STRING>",
+        "LAT": "<NUMBER>",
+        "LON": "<NUMBER>",
+        "PHONE": "<STRING>",
+        "REVENUE": "<NUMBER>",
+        "UTILIZATION": "<NUMBER>",
+    },
+    "providers": {
+        "PROVIDER_ID": "<UUID>",
+        "ORGANIZATION_REF": "<REF>",
+        "NAME": "<STRING>",
+        "GENDER": "<CHAR>",
+        "SPECIALITY": "<STRING>",
+        "ADDRESS": "<STRING>",
+        "CITY": "<STRING>",
+        "STATE": "<CHAR>",
+        "ZIP": "<STRING>",
+        "LAT": "<NUMBER>",
+        "LON": "<NUMBER>",
+        "ENCOUNTERS": "<NUMBER>",
+        "PROCEDURES": "<NUMBER>",
+    },
+    "payers": {
+        "PAYER_ID": "<UUID>",
+        "NAME": "<STRING>",
+        "OWNERSHIP": "<STRING>",
+        "AMOUNT_COVERED": "<NUMBER>",
+        "AMOUNT_UNCOVERED": "<NUMBER>",
+        "REVENUE": "<NUMBER>",
+        "COVERED_ENCOUNTERS": "<NUMBER>",
+        "UNCOVERED_ENCOUNTERS": "<NUMBER>",
+        "COVERED_MEDICATIONS": "<NUMBER>",
+        "UNCOVERED_MEDICATIONS": "<NUMBER>",
+        "COVERED_PROCEDURES": "<NUMBER>",
+        "UNCOVERED_PROCEDURES": "<NUMBER>",
+        "COVERED_IMMUNIZATIONS": "<NUMBER>",
+        "UNCOVERED_IMMUNIZATIONS": "<NUMBER>",
+        "UNIQUE_CUSTOMERS": "<NUMBER>",
+        "QOLS_AVG": "<NUMBER>",
+        "MEMBER_MONTHS": "<NUMBER>",
+    },
+}
+
+mql_schema = str(mql_schema)
+
+cypher_schema = """Encounter {code: STRING, id: STRING, end: DATE_TIME, reasonCode: STRING, reasonDescription: STRING, isEnd: BOOLEAN, claimCost: FLOAT, coveredAmount: FLOAT, class: STRING, baseCost: FLOAT, date: DATE_TIME, description: STRING},Patient {county: STRING, birthplace: STRING, ethnicity: STRING, maiden: STRING, marital: STRING, race: STRING, firstName: STRING, lastName: STRING, passport: STRING, prefix: STRING, suffix: STRING, SSN: STRING, drivers: STRING, gender: STRING, birthDate: DATE_TIME, city: STRING, state: STRING, address: STRING, healthcareCoverage: FLOAT, income: FLOAT, FIPS: STRING, healthcareExpenses: FLOAT, zip: STRING, id: STRING, deathDate: DATE_TIME},Provider {zip: STRING, encounters: STRING, name: STRING, state: STRING, address: STRING, city: STRING, lat: STRING, lon: STRING, procedures: STRING, gender: STRING, speciality: STRING, id: STRING},Payer {qols_avg: FLOAT, member_months: FLOAT, uncovered_procedures: INTEGER, covered_immunizations: INTEGER, uncovered_immunizations: INTEGER, unique_customers: INTEGER, uncovered_encounters: INTEGER, covered_medications: INTEGER, uncovered_medications: INTEGER, covered_procedures: INTEGER, amount_uncovered: FLOAT, revenue: FLOAT, phone: STRING, amount_covered: FLOAT, covered_encounters: INTEGER, ownership: STRING, state: STRING, zip: STRING, address: STRING, name: STRING, city: STRING, id: STRING},PayerTransition {memberid: STRING},Organization {phone: STRING, revenue: STRING, utilization: STRING, name: STRING, state: STRING, address: STRING, city: STRING, lat: STRING, lon: STRING, id: STRING},Medication {payerCoverage: FLOAT, totalCost: FLOAT, stop: DATE_TIME, reasonDescription: STRING, reasonCode: STRING, code: STRING, start: DATE_TIME, description: STRING, dispenses: INTEGER, baseCost: FLOAT},Condition {code: STRING, start: DATE_TIME, description: STRING, stop: DATE_TIME},CarePlan {encounterId: STRING, patientId: STRING, stop: DATE_TIME, code: STRING, id: STRING, start: DATE_TIME, reasondescription: STRING, description: STRING, reasoncode: STRING},Allergy {description2: STRING, severity2: STRING, code: STRING, severity1: STRING, reaction2: STRING, category: STRING, reaction1: STRING, description1: STRING, system: STRING, type: STRING, description: STRING, start: DATE_TIME},Address {address: STRING, location: POINT, city: STRING, state: STRING, zip: STRING, county: STRING, longitude: FLOAT, FIPS: STRING, latitude: FLOAT},Procedure {code: STRING, reasondescription: STRING, start: DATE_TIME, codes: STRING, reasoncode: STRING, basecost: STRING, description: STRING, stop: DATE_TIME},Claim {providerId: STRING, lastBilledDateP: DATE_TIME, lastBilledDate2: DATE_TIME, lastBilledDate1: DATE_TIME, statusP: STRING, healthcareClaimTypeId1: STRING, healthcareClaimTypeId2: STRING, status1: STRING, status2: STRING, supervisingProviderId: STRING, serviceDate: DATE_TIME, outstandingP: STRING, currentIllnessDate: DATE_TIME, outstanding2: STRING, appointmentId: STRING, diagnosis4: STRING, referringProviderId: STRING, departmentId: STRING, outstanding1: STRING, diagnosis1: STRING, diagnosis2: STRING, diagnosis3: STRING, patientId: STRING, id: STRING},ClaimTransaction {unitAmount: FLOAT, transferOutId: STRING, procedureCode: STRING, modifier2: STRING, notes: STRING, placeOfService: STRING, toDate: DATE_TIME, modifier1: STRING, method: STRING, fromDate: DATE_TIME, providerId: STRING, patientId: STRING, units: STRING, chargeId: STRING, amount: FLOAT, id: STRING, transfers: FLOAT, type: STRING, claimId: STRING, adjustments: FLOAT, outstanding: FLOAT, transferType: STRING, payments: FLOAT, lineNote: STRING},Device {udi: STRING, code: STRING, description: STRING, start: DATE_TIME, stop: DATE_TIME},ImagingStudy {encounterId: STRING, patientId: STRING, sopDescription: STRING, sopCode: STRING, instanceUid: STRING, modalityDescription: STRING, procedureCode: STRING, id: STRING, bodySiteCode: STRING, modalityCode: STRING, seriesUid: STRING, date: DATE_TIME, bodySiteDescription: STRING},Immunization {baseCost: STRING, code: STRING, description: STRING, date: DATE_TIME},Supply {description: STRING, code: STRING, quantity: STRING, date: DATE_TIME},Observation {encounterId: STRING, patientId: STRING, category: STRING, units: STRING, code: STRING, description: STRING, type: STRING, value: STRING, date: DATE_TIME}
+Relationship properties are the following:
+INSURANCE_START {ownerName: STRING, planOwnership: STRING, endDate: DATE_TIME, startDate: DATE_TIME, secondaryPayer: STRING}
+The relationships are the following:
+(:Encounter)-[:HAS_PATIENT]->(:Patient),(:Encounter)-[:IS_RESPONSIBLE_FOR]->(:Organization),(:Encounter)-[:HAS_PROVIDER]->(:Provider),(:Encounter)-[:IS_COVERED_BY]->(:Payer),(:Encounter)-[:HAS_DIAGNOSED]->(:Condition),(:Encounter)-[:HAS_DIAGNOSED]->(:Allergy),(:Encounter)-[:HAS_PRESCRIBED]->(:Immunization),(:Encounter)-[:HAS_PRESCRIBED]->(:Medication),(:Encounter)-[:IS_ORDERED_DURING]->(:Observation),(:Encounter)-[:IS_ORDERED_DURING]->(:Procedure),(:Encounter)-[:IS_ORDERED_DURING]->(:CarePlan),(:Encounter)-[:HAS_ORDERED]->(:Supply),(:Encounter)-[:HAS_ORDERED]->(:Device),(:Encounter)-[:HAS_ORDERED]->(:ImagingStudy),(:Patient)-[:HAS_ENCOUNTER]->(:Encounter),(:Patient)-[:HAS_PAYERTRANSITION]->(:PayerTransition),(:Patient)-[:HAS_ADDRESS]->(:Address),(:Patient)-[:HAS_HISTORY_OF]->(:Procedure),(:Patient)-[:HAS_HISTORY_OF]->(:Observation),(:Patient)-[:HAS_HISTORY_OF]->(:Condition),(:Patient)-[:HAS_HISTORY_OF]->(:Medication),(:Patient)-[:HAS_HISTORY_OF]->(:ImagingStudy),(:Patient)-[:HAS_CLAIM]->(:Claim),(:Patient)-[:HAS_TRANSACTION]->(:ClaimTransaction),(:Patient)-[:IS_MEASURED_BY]->(:Device),(:Patient)-[:HAS_HISTORY_FOR]->(:Immunization),(:Patient)-[:INSURANCE_START]->(:Payer),(:Patient)-[:HAS_CAREPLAN]->(:CarePlan),(:Patient)-[:HAS_ALLERGY]->(:Allergy),(:Patient)-[:IS_ORDERED_FOR]->(:Supply),(:Provider)-[:HAS_ENCOUNTER]->(:Encounter),(:Provider)-[:IS_AFFILIATED_WITH]->(:Organization),(:Provider)-[:HAS_ADDRESS]->(:Address),(:Provider)-[:HAS_FILED]->(:Claim),(:Provider)-[:HAS_TRANSACTION]->(:ClaimTransaction),(:Payer)-[:HAS_PAYERTRANSITION]->(:PayerTransition),(:Payer)-[:HAS_COVERED]->(:Encounter),(:Payer)-[:HAS_COVERED]->(:Medication),(:PayerTransition)-[:HAS_PAYERRECORD]->(:Payer),(:Organization)-[:HAS_ADDRESS]->(:Address),(:Organization)-[:IS_PERFORMED_AT]->(:Provider),(:Organization)-[:IS_PERFOMED_AT]->(:Encounter),(:Medication)-[:IS_COVERED_BY]->(:Payer),(:Medication)-[:IS_PRESCRIBED_DURING]->(:Encounter),(:Medication)-[:IS_PRESCRIBED_FOR]->(:Patient),(:Condition)-[:IS_ABOUT]->(:Patient),(:Condition)-[:IS_DIAGNOSED_DURING]->(:Encounter),(:CarePlan)-[:IS_ABOUT]->(:Patient),(:CarePlan)-[:HAS_ORDERED]->(:Encounter),(:Allergy)-[:IS_ABOUT]->(:Patient),(:Allergy)-[:IS_DIAGNOSED_DURING]->(:Encounter),(:Procedure)-[:IS_ORDERED_FOR]->(:Patient),(:Procedure)-[:HAS_ORDERED]->(:Encounter),(:Claim)-[:IS_ASSOCIATED_WITH]->(:Patient),(:Claim)-[:IS_FILED_BY]->(:Provider),(:Claim)-[:HAS_TRANSACTION]->(:ClaimTransaction),(:ClaimTransaction)-[:IS_ASSOCIATED_WITH]->(:Patient),(:ClaimTransaction)-[:IS_ASSOCIATED_WITH]->(:Claim),(:ClaimTransaction)-[:IS_TRANSACTION_FOR]->(:Claim),(:Device)-[:IS_ORDERED_DURING]->(:Encounter),(:Device)-[:HAS_MEASURED]->(:Patient),(:ImagingStudy)-[:IS_ORDERED_DURING]->(:Encounter),(:ImagingStudy)-[:IS_PRESCRIBED_FOR]->(:Patient),(:Immunization)-[:IS_PRESCRIBED_FOR]->(:Patient),(:Immunization)-[:IS_PRESCRIBED_DURING]->(:Encounter),(:Supply)-[:HAS_HISTORY_OF]->(:Patient),(:Supply)-[:IS_ORDERED_DURING]->(:Encounter),(:Observation)-[:IS_ABOUT]->(:Patient),(:Observation)-[:HAS_ORDERED]->(:Encounter)
+"""
+
+
+def read_ttl_file(file_path):
+    with open(file_path, "r") as file:
+        return file.read()
+
+
+sql_schema = (
+    """CREATE TABLE organizations (
+                            Id UUID NOT NULL PRIMARY KEY,
+                            NAME TEXT NOT NULL,
+                            ADDRESS TEXT NOT NULL,
+                            CITY VARCHAR(255) NOT NULL,
+                            STATE TEXT NOT NULL,
+                            ZIP TEXT NOT NULL,
+                            LAT NUMERIC NOT NULL,
+                            LON NUMERIC NOT NULL,
+                            PHONE VARCHAR(255),
+                            REVENUE NUMERIC NOT NULL,
+                            UTILIZATION INTEGER NOT NULL
+                        );
+                        """,
+    """CREATE TABLE payers (
+                        Id UUID NOT NULL PRIMARY KEY,
+                        NAME TEXT NOT NULL,
+                        OWNERSHIP VARCHAR(50) NOT NULL,
+                        AMOUNT_COVERED NUMERIC NOT NULL,
+                        AMOUNT_UNCOVERED NUMERIC NOT NULL,
+                        REVENUE NUMERIC NOT NULL,
+                        COVERED_ENCOUNTERS INTEGER NOT NULL,
+                        UNCOVERED_ENCOUNTERS INTEGER NOT NULL,
+                        COVERED_MEDICATIONS INTEGER NOT NULL,
+                        UNCOVERED_MEDICATIONS INTEGER NOT NULL,
+                        COVERED_PROCEDURES INTEGER NOT NULL,
+                        UNCOVERED_PROCEDURES INTEGER NOT NULL,
+                        COVERED_IMMUNIZATIONS INTEGER NOT NULL,
+                        UNCOVERED_IMMUNIZATIONS INTEGER NOT NULL,
+                        UNIQUE_CUSTOMERS INTEGER NOT NULL,
+                        QOLS_AVG NUMERIC(10,6) NOT NULL,
+                        MEMBER_MONTHS INTEGER NOT NULL
+);
+                        """,
+    """CREATE TABLE patients (
+                            Id UUID NOT NULL PRIMARY KEY,
+                            BIRTHDATE DATE NOT NULL,
+                            DEATHDATE DATE,
+                            SSN VARCHAR(11),
+                            DRIVERS VARCHAR(9),
+                            PASSPORT VARCHAR(9),
+                            PREFIX VARCHAR(4),
+                            FIRST VARCHAR(100) NOT NULL,
+                            LAST VARCHAR(100) NOT NULL,
+                            SUFFIX VARCHAR(10),
+                            MAIDEN VARCHAR(100),
+                            MARITAL CHAR(1),
+                            RACE VARCHAR(50) NOT NULL,
+                            ETHNICITY VARCHAR(50) NOT NULL,
+                            GENDER CHAR(1) NOT NULL,
+                            BIRTHPLACE TEXT NOT NULL,
+                            ADDRESS TEXT NOT NULL,
+                            CITY VARCHAR(100) NOT NULL,
+                            STATE VARCHAR(100) NOT NULL,
+                            COUNTY VARCHAR(100) NOT NULL,
+                            FIPS NUMERIC,
+                            ZIP VARCHAR(10),
+                            LAT NUMERIC(9,6) NOT NULL,
+                            LON NUMERIC(9,6) NOT NULL,
+                            HEALTHCARE_EXPENSES NUMERIC NOT NULL,
+                            HEALTHCARE_COVERAGE NUMERIC NOT NULL,
+                            INCOME INTEGER NOT NULL
+                        );
+                         """,
+    """CREATE TABLE encounters (
+                            Id UUID NOT NULL PRIMARY KEY,
+                            START TIMESTAMP WITH TIME ZONE,
+                            STOP TIMESTAMP WITH TIME ZONE,
+                            PATIENT UUID REFERENCES patients(Id),
+                            ORGANIZATION UUID REFERENCES organizations(Id),
+                            PROVIDER UUID ,
+                            PAYER UUID REFERENCES payers(Id),
+                            ENCOUNTERCLASS TEXT,
+                            CODE BIGINT,
+                            DESCRIPTION TEXT,
+                            BASE_ENCOUNTER_COST NUMERIC,
+                            TOTAL_CLAIM_COST NUMERIC,
+                            PAYER_COVERAGE NUMERIC,
+                            REASONCODE BIGINT,
+                            REASONDESCRIPTION TEXT
+                        );
+                         """,
+    """ CREATE TABLE procedures (
+                            START TIMESTAMP WITH TIME ZONE NOT NULL,
+                            STOP TIMESTAMP WITH TIME ZONE,
+                            PATIENT UUID REFERENCES patients(Id),
+                            ENCOUNTER UUID REFERENCES encounters(Id),
+                            CODE BIGINT NOT NULL,
+                            DESCRIPTION TEXT NOT NULL,
+                            BASE_COST NUMERIC NOT NULL,
+                            REASONCODE BIGINT,
+                            REASONDESCRIPTION TEXT,
+                            PRIMARY KEY (PATIENT, ENCOUNTER, CODE)
+                            );
+                        """,
+    """CREATE TABLE providers (
+                            Id UUID NOT NULL PRIMARY KEY,
+                            ORGANIZATION UUID NOT NULL,
+                            NAME TEXT NOT NULL,
+                            GENDER CHAR(1) NOT NULL,
+                            SPECIALITY VARCHAR(255) NOT NULL,
+                            ADDRESS TEXT NOT NULL,
+                            CITY VARCHAR(100) NOT NULL,
+                            STATE CHAR(2) NOT NULL,
+                            ZIP VARCHAR(10) NOT NULL,
+                            LAT NUMERIC(9,6) NOT NULL,
+                            LON NUMERIC(9,6) NOT NULL,
+                            ENCOUNTERS UUID REFERENCES encounters(Id),
+                            PROCEDURES UUID 
+                            );
+                        """,
+    """CREATE TABLE allergies (
+                            START TIMESTAMP WITH TIME ZONE,
+                            STOP TIMESTAMP WITH TIME ZONE,
+                            PATIENT UUID REFERENCES patients(Id),
+                            ENCOUNTER UUID REFERENCES encounters(Id),
+                            CODE BIGINT,
+                            SYSTEM TEXT,
+                            DESCRIPTION TEXT,
+                            TYPE TEXT,
+                            CATEGORY TEXT,
+                            REACTION1 BIGINT,
+                            DESCRIPTION1 TEXT,
+                            SEVERITY1 TEXT,
+                            REACTION2 BIGINT,
+                            DESCRIPTION2 TEXT,
+                            SEVERITY2 TEXT,
+                            PRIMARY KEY (PATIENT, ENCOUNTER, CODE)
+                            );
+                        """,
+    """ CREATE TABLE careplans (
+                            Id UUID PRIMARY KEY,
+                            START TIMESTAMP WITH TIME ZONE,
+                            STOP TIMESTAMP WITH TIME ZONE,
+                            PATIENT UUID REFERENCES patients(Id),
+                            ENCOUNTER UUID REFERENCES encounters(Id),
+                            CODE BIGINT,
+                            DESCRIPTION TEXT,
+                            REASONCODE BIGINT,
+                            REASONDESCRIPTION TEXT
+                            );
+                        """,
+    """ CREATE TABLE claims (
+                            Id UUID PRIMARY KEY,
+                            PATIENTID UUID REFERENCES patients(Id),
+                            PROVIDERID UUID REFERENCES providers(Id),
+                            PRIMARYPATIENTINSURANCEID UUID,
+                            SECONDARYPATIENTINSURANCEID UUID,
+                            DEPARTMENTID BIGINT,
+                            PATIENTDEPARTMENTID BIGINT,
+                            DIAGNOSIS1 BIGINT,
+                            DIAGNOSIS2 BIGINT,
+                            DIAGNOSIS3 BIGINT,
+                            DIAGNOSIS4 BIGINT,
+                            DIAGNOSIS5 BIGINT,
+                            DIAGNOSIS6 BIGINT,
+                            DIAGNOSIS7 BIGINT,
+                            DIAGNOSIS8 BIGINT,
+                            REFERRINGPROVIDERID UUID REFERENCES providers(Id),
+                            APPOINTMENTID UUID,
+                            CURRENTILLNESSDATE TIMESTAMP WITH TIME ZONE,
+                            SERVICEDATE TIMESTAMP WITH TIME ZONE,
+                            SUPERVISINGPROVIDERID UUID REFERENCES providers(Id),
+                            STATUS1 TEXT,
+                            STATUS2 TEXT,
+                            STATUSP TEXT,
+                            OUTSTANDING1 TEXT,
+                            OUTSTANDING2 TEXT,
+                            OUTSTANDINGP TEXT,
+                            LASTBILLEDDATE1 TIMESTAMP WITH TIME ZONE,
+                            LASTBILLEDDATE2 TIMESTAMP WITH TIME ZONE,
+                            LASTBILLEDDATEP TIMESTAMP WITH TIME ZONE,
+                            HEALTHCARECLAIMTYPEID1 BIGINT,
+                            HEALTHCARECLAIMTYPEID2 BIGINT
+                            );
+                        """,
+    """ CREATE TABLE claims_transactions(
+                            ID UUID PRIMARY KEY,
+                            CLAIMID UUID REFERENCES claims(Id),
+                            CHARGEID NUMERIC,
+                            PATIENTID UUID REFERENCES patients(Id),
+                            TYPE TEXT,
+                            AMOUNT TEXT,
+                            METHOD TEXT,
+                            FROMDATE TIMESTAMP WITH TIME ZONE,
+                            TODATE TIMESTAMP WITH TIME ZONE,
+                            PLACEOFSERVICE TEXT,
+                            PROCEDURECODE TEXT,
+                            MODIFIER1 TEXT,
+                            MODIFIER2 TEXT,
+                            DIAGNOSISREF1 TEXT,
+                            DIAGNOSISREF2 TEXT,
+                            DIAGNOSISREF3 TEXT,
+                            DIAGNOSISREF4 TEXT,
+                            UNITS BIGINT,
+                            DEPARTMENTID TEXT,
+                            NOTES TEXT,
+                            UNITAMOUNT TEXT,
+                            TRANSFEROUTID TEXT,
+                            TRANSFERTYPE TEXT,
+                            PAYMENTS TEXT,
+                            ADJUSTMENTS TEXT,
+                            TRANSFERS TEXT,
+                            OUTSTANDING TEXT,
+                            APPOINTMENTID TEXT,
+                            LINENOTE TEXT,
+                            PATIENTINSURANCEID UUID,
+                            FEESCHEDULEID TEXT,
+                            PROVIDERID UUID REFERENCES providers(Id),
+                            SUPERVISINGPROVIDERID UUID REFERENCES providers(Id)
+                            );
+                        """,
+    """ CREATE TABLE conditions (
+                            START TIMESTAMP WITH TIME ZONE,
+                            STOP TIMESTAMP WITH TIME ZONE,
+                            PATIENT UUID REFERENCES patients(Id),
+                            ENCOUNTER UUID REFERENCES encounters(Id),
+                            CODE BIGINT,
+                            DESCRIPTION TEXT,
+                            PRIMARY KEY (PATIENT, ENCOUNTER, CODE)
+                            );
+                        """,
+    """ CREATE TABLE devices (
+                            START TIMESTAMP WITH TIME ZONE,
+                            STOP TIMESTAMP WITH TIME ZONE,
+                            PATIENT UUID REFERENCES patients(Id),
+                            ENCOUNTER UUID REFERENCES encounters(Id),
+                            CODE BIGINT,
+                            DESCRIPTION TEXT,
+                            UDI TEXT,
+                            PRIMARY KEY (PATIENT, ENCOUNTER, CODE, UDI)
+                            );
+                        """,
+    """ CREATE TABLE imaging_studies (
+                            Id UUID PRIMARY KEY,
+                            DATE TIMESTAMP WITH TIME ZONE,
+                            PATIENT UUID REFERENCES patients(Id),
+                            ENCOUNTER UUID REFERENCES encounters(Id),
+                            SERIES_UID TEXT,
+                            BODYSITE_CODE BIGINT,
+                            BODYSITE_DESCRIPTION TEXT,
+                            MODALITY_CODE TEXT,
+                            MODALITY_DESCRIPTION TEXT,
+                            INSTANCE_UID TEXT,
+                            SOP_CODE TEXT,
+                            SOP_DESCRIPTION TEXT,
+                            PROCEDURE_CODE BIGINT
+                            );
+                        """,
+    """ CREATE TABLE immunizations (
+                            DATE TIMESTAMP WITH TIME ZONE,
+                            PATIENT UUID REFERENCES patients(Id),
+                            ENCOUNTER UUID REFERENCES encounters(Id),
+                            CODE BIGINT,
+                            DESCRIPTION TEXT,
+                            BASE_COST NUMERIC,
+                            PRIMARY KEY (PATIENT, ENCOUNTER, CODE)
+                            );
+                        """,
+    """ CREATE TABLE medications (
+                            START TIMESTAMP WITH TIME ZONE NOT NULL,
+                            STOP TIMESTAMP WITH TIME ZONE,
+                            PATIENT UUID REFERENCES patients(Id),
+                            PAYER UUID REFERENCES payers(Id),
+                            ENCOUNTER UUID REFERENCES encounters(Id),
+                            CODE BIGINT NOT NULL,
+                            DESCRIPTION TEXT NOT NULL,
+                            BASE_COST NUMERIC NOT NULL,
+                            PAYER_COVERAGE NUMERIC NOT NULL,
+                            DISPENSES INTEGER NOT NULL,
+                            TOTALCOST NUMERIC NOT NULL,
+                            REASONCODE BIGINT,
+                            REASONDESCRIPTION TEXT,
+                            PRIMARY KEY (PATIENT, ENCOUNTER, CODE)
+                            );
+                        """,
+    """ CREATE TABLE observations (
+                            DATE TIMESTAMP WITH TIME ZONE,
+                            PATIENT UUID REFERENCES patients(Id),
+                            ENCOUNTER UUID REFERENCES encounters(Id),
+                            CATEGORY TEXT,
+                            CODE TEXT,
+                            DESCRIPTION TEXT,
+                            VALUE TEXT,
+                            UNITS TEXT,
+                            TYPE TEXT,
+                            PRIMARY KEY (PATIENT, ENCOUNTER, CODE)
+                            );
+                        """,
+    """ CREATE TABLE payer_transitions (
+                            PATIENT UUID REFERENCES patients(Id),
+                            MEMBERID UUID,
+                            START_DATE TIMESTAMP WITH TIME ZONE,
+                            END_DATE TIMESTAMP WITH TIME ZONE,
+                            PAYER UUID REFERENCES payers(Id),
+                            SECONDARY_PAYER UUID REFERENCES payers(Id),
+                            PLAN_OWNERSHIP VARCHAR NOT NULL,
+                            OWNER_NAME TEXT NOT NULL,
+                            PRIMARY KEY (PATIENT, MEMBERID, START_DATE)
+                            );
+                        """,
+    """ CREATE TABLE supplies (
+                            DATE TIMESTAMP WITH TIME ZONE NOT NULL,
+                            PATIENT UUID REFERENCES patients(Id),
+                            ENCOUNTER UUID REFERENCES encounters(Id),
+                            CODE BIGINT NOT NULL,
+                            DESCRIPTION TEXT NOT NULL,
+                            QUANTITY INTEGER NOT NULL,
+                            PRIMARY KEY (PATIENT, ENCOUNTER, CODE)
+                            );
+                        """,
+    """ CREATE TABLE patient_expenses (
+                            PATIENT_ID UUID REFERENCES patients(Id),
+                            YEAR TIMESTAMP WITH TIME ZONE,
+                            PAYER_ID UUID REFERENCES payers(Id),
+                            HEALTHCARE_EXPENSES NUMERIC NOT NULL,
+                            INSURANCE_COSTS NUMERIC NOT NULL,
+                            COVERED_COSTS NUMERIC NOT NULL,
+                            PRIMARY KEY (PATIENT_ID, YEAR, PAYER_ID)
+                            );
+                        """,
+)
