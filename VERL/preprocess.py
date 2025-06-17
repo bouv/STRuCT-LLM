@@ -39,9 +39,9 @@ def main():
     parser.add_argument("--local_dir", default='path')
     parser.add_argument("--hdfs_dir", default=None)
     args = parser.parse_args()
-    clinton_data=pd.read_csv('path/correct_sql_qa_clinton.csv')
-    clinton_data=Dataset.from_pandas(clinton_data)
-    clinton_data=clinton_data.shuffle(seed=42)
+
+
+    clinton_data = load_dataset("jls205/synthetic_cot_traces_clinton", data_files="cot.csv")['train'].shuffle(seed=42)
     clinton_data = clinton_data.map(lambda x: {'query_type': 'sql'})
     train_size_1 = int(0.99 * len(clinton_data))
     test_size_1 = int(0.01 * len(clinton_data))
@@ -50,8 +50,7 @@ def main():
 
 
 
-    cypher_data = pd.read_csv('path/Cypher_cot.csv')  # Added for 
-    cypher_data=Dataset.from_pandas(cypher_data)
+    cypher_data=load_dataset("jls205/synthetic_cot_traces_cypher", data_files="Cypher_cot.csv")['train'].shuffle(seed=42)
     cypher_data.rename_column('answer','query')
     train_size_2 = int(0.99 * len(cypher_data))
     test_size_2 = int(0.01 * len(cypher_data))
