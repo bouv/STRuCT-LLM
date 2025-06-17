@@ -36,7 +36,7 @@ with the answer. The reasoning process is enclosed within <think> </think> tags,
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--local_dir", default='/dcai/projects02/data/mbvk/mixed_cot_sql_cypher/')
+    parser.add_argument("--local_dir", default='path')
     parser.add_argument("--hdfs_dir", default=None)
     args = parser.parse_args()
     clinton_data=pd.read_csv('path/correct_sql_qa_clinton.csv')
