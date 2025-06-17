@@ -3,7 +3,8 @@
 ### Links
 
 📖[Arxiv Paper]() |
-🤗[Synthetic Data]( ) |
+🤗[Synthetic Cypher Data](https://huggingface.co/datasets/jls205/synthetic_cot_traces_cypher) |
+🤗[Synthetic SQL Data](https://huggingface.co/datasets/jls205/synthetic_cot_traces_clinton)
 
 ---
 
