@@ -86,4 +86,23 @@ options:
 
 ```
 
-## Option 2: VERL
+## Option 2: VERLL
+
+This repository includes a script for training models using the **VERL** library on a SLURM-managed compute cluster. Follow the instructions below to set up your environment and submit a training job.
+
+## Prerequisites
+
+- Ensure that Docker is installed and configured on your cluster.
+- Have access to the SLURM workload manager.
+- Set up a virtual environment with Python and the required dependencies.
+
+## Setting Up the Environment
+
+1. **Define Job Parameters**:  
+   Update the job parameters located at the beginning of the script, such as job name, resource allocation, and Docker image.
+   ```bash
+   #SBATCH --job-name="sql_grpo_v1.0.1"
+   #SBATCH --nodes=1
+   #SBATCH --gpus-per-task=8
+   # Other SLURM parameters...
+   DOCKER_IMAGE=docker://your.registry.com/your_image:your_tag
