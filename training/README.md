@@ -86,7 +86,7 @@ options:
 
 ```
 
-## Option 2: VERLL
+## Option 2: VERL
 
 This repository includes a script for training models using the **VERL** library on a SLURM-managed compute cluster. Follow the instructions below to set up your environment and submit a training job.
 
