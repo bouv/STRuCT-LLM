@@ -4,8 +4,8 @@
 
 📖[Arxiv Paper]() |
 🤗[Synthetic Cypher Data](https://huggingface.co/datasets/jls205/synthetic_cot_traces_cypher) |
-🤗[Synthetic SQL Data](https://huggingface.co/datasets/jls205/synthetic_cot_traces_clinton)
-
+🤗[Synthetic SQL Data](https://huggingface.co/datasets/jls205/synthetic_cot_traces_clinton) |
+🤗[Model](https://huggingface.co/boubnov/STRuCT-LLM-Novo)
 ---
 
 ## Introduction
