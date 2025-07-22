@@ -35,7 +35,7 @@ class CRTQAEvaluator(BaseEvaluator):
                     title = question["Tittle"]
                     all_tasks.append((title, question_text, csv_data, answer))
 
-        with open(f"/novo/projects/departments/mi/ofsr/datasets/CRT-QA/CRT-QA/unanswerable.json") as file:
+        with open(f"{self.args.base_dir}/CRT-QA/CRT-QA/CRT-QA/unanswerable.json") as file:
             unanswerable_json = json.load(file)
         for task in unanswerable_json:
             csv_file_path = f"{csv_folder_path}/{task['csv file']}"
