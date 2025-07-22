@@ -41,7 +41,7 @@ class SpiderEvaluator(BaseEvaluator):
         for db_id in set(ds["db_id"]):
             try:
                 sqlite_file = sqlite_file = (
-                    f"/novo/projects/departments/mi/ofsr/datasets/spider_data/test_database/{db_id}/{db_id}.sqlite"
+                    f"{self.args.base_dir}/spider_data/test_database/{db_id}/{db_id}.sqlite"
                 )
                 db = SQLDatabase.from_uri(
                     f"sqlite:///{sqlite_file}", sample_rows_in_table_info=0
